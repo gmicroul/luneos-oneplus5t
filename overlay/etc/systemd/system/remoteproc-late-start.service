@@ -1,0 +1,13 @@
+[Unit]
+Description=Repair audio: start ADSP/SLPI late and rebuild the audio driver chain
+After=multi-user.target
+Wants=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/audio-repair.sh
+RemainAfterExit=yes
+TimeoutSec=300
+
+[Install]
+WantedBy=multi-user.target

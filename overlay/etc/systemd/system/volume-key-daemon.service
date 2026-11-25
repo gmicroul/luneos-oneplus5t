@@ -1,0 +1,12 @@
+[Unit]
+Description=Volume key handler for the ALSA hardware sink
+After=multi-user.target remoteproc-late-start.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/sbin/volume-key-daemon.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,21 @@
+{
+    "allowedNames": [
+        "com.webos.service.audiooutput"
+    ],
+    "type": "regular",
+    "trustLevel": "oem",
+    "permissions": [
+        {
+            "service": "com.webos.service.audiooutput",
+            "outbound": [
+                "com.webos.service.audiofocusmanager",
+                "com.webos.service.audio",
+                "com.webos.service.mediacontroller",
+                "com.palm.systemmanager",
+                "com.webos.service.settings",
+                "com.webos.lunasend-*"
+            ]
+        }
+    ],
+    "exeName": "/usr/sbin/audiooutputd"
+}

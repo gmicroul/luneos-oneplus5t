@@ -1,0 +1,87 @@
+{
+  "kind": "dumpling-luneos-volte-audio-statusbar-fixes",
+  "base": "phase4-native-desktop-repack",
+  "boot": {
+    "bytes": 58654720,
+    "sha256": "316c36ba4386a702c15ab4b038bce8a904ec75bf38dcf96036d9c6a203106d17",
+    "cmdline": "console=tty0 console=ttyGS0,115200 loglevel=7 clk_ignore_unused modprobe.blacklist=ipa"
+  },
+  "rootfs_bytes": 5652157440,
+  "rootfs_sha256": "8e1891117f0e996f7cb25430f0ce643204c5e43024ebf0e8c7dc92b22526c2bf",
+  "userdata_expanded_bytes": 6189031424,
+  "userdata_expanded_sha256": "9eba46dbc6e896c2451663397c454c971e104ff7d97988061e65f30e9d22ac68",
+  "userdata_sparse_bytes": 4306579864,
+  "userdata_sparse_sha256": "cefd67cebccb4a5acca2987a7c80d4d04793f50342253edea3fb98b01123b002",
+  "sparse_chunks": 1051,
+  "wrapped_rootfs_verified": true,
+  "sparse_expansion_verified": true,
+  "runtime_verified": false,
+  "overlay": [
+    {
+      "path": "/etc/systemd/system/remoteproc-late-start.service",
+      "sha256": "1a831926450f9e05c133e70b9b3c07aa68266ec45746f2884198cf1ba6979314"
+    },
+    {
+      "path": "/etc/systemd/system/volume-key-daemon.service",
+      "sha256": "bacd092914a7bd0c873f86b934ab28ded07fcf1dfda1bca5b2534b0982b89928"
+    },
+    {
+      "path": "/etc/systemd/system/luneos-mobile-data.service.d/60-after-ofono.conf",
+      "sha256": "d080565f99b3921cd0c95d535e615f20d6823620fed8919e61ede52c2aa7e893"
+    },
+    {
+      "path": "/etc/systemd/system/ofono.service.d/10-modem-online.conf",
+      "sha256": "c8b8f731a23d93a1feb81c124c8474208b94144f881266de86586319e40d46e4"
+    },
+    {
+      "path": "/etc/ofono/qrtr.conf",
+      "sha256": "a819253bc0f66e9c774b6c1089cad2b6296fd41cd504cd2725c60246c37cef61"
+    },
+    {
+      "path": "/usr/local/sbin/luneos-ofono-post-online.sh",
+      "sha256": "89fd2d583c5f46f55f5e2345ef1ba575da7873efb600cdc97541b746eb1e9e55"
+    },
+    {
+      "path": "/usr/local/sbin/audio-repair.sh",
+      "sha256": "11e6d72f86bbf95c756b813a4d7f275b512d297445167ac509f249a5dcb97c54"
+    },
+    {
+      "path": "/usr/share/luna-service2/services.d/com.webos.service.audiooutput.service",
+      "sha256": "6f87bf03912c0df2dae0c52915ddc77be9e7d54faa4d2ee198bfa89d63c7f4ab"
+    },
+    {
+      "path": "/usr/share/luna-service2/roles.d/com.webos.service.audiooutput.role.json",
+      "sha256": "7ead240d2dc9efafd036c042fc666b1e6d0082f0d5674c3eca351fb040a63f5e"
+    },
+    {
+      "path": "/usr/lib/qml/WebOSCompositor/qml/Connectors/MultiSimModel.qml",
+      "sha256": "6a2efa1efa6430b440e9df9ef76024414233b6d87bfe0e9519f94d506c5a863b"
+    },
+    {
+      "path": "/usr/lib/modules/6.1.192/kernel/drivers/net/ipa/ipa.ko",
+      "sha256": "f690bb42e4af3f12337d9c6e6a7edfbc0c5c46ff3994957c05523795da89a479"
+    },
+    {
+      "path": "/usr/lib/modules/6.1.192/kernel/sound/soc/qcom/qdsp6/q6routing.ko",
+      "sha256": "dd44a0de9ec67caa9fd98dfec7b6660bf7d1d1cda5bd10bf63b813a01c0caedb"
+    },
+    {
+      "path": "/usr/lib/modules/6.1.192/kernel/sound/soc/qcom/qdsp6/q6asm.ko",
+      "sha256": "2c45d08a0d73d6925973676fb75b1d502120533659bf809703e8a742b737991a"
+    },
+    {
+      "path": "/usr/lib/pulseaudio/modules/module-palm-policy.so",
+      "sha256": "fcdf7f405720d102be854e485e1cd3f5f7f9fa97e730994e4d63b140edd478fd"
+    }
+  ],
+  "links": [
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/remoteproc-late-start.service",
+      "target": "/etc/systemd/system/remoteproc-late-start.service"
+    },
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/ofono.service",
+      "target": "/usr/lib/systemd/system/ofono.service"
+    }
+  ]
+}
