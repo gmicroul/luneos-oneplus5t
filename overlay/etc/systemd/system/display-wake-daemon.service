@@ -1,0 +1,13 @@
+[Unit]
+Description=Display wake watchdog (double tap and power key)
+After=multi-user.target luna-displaymanager.service
+Wants=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/sbin/display-wake-daemon.py
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

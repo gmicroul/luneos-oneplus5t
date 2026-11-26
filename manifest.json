@@ -7,11 +7,11 @@
     "cmdline": "console=tty0 console=ttyGS0,115200 loglevel=7 clk_ignore_unused modprobe.blacklist=ipa"
   },
   "rootfs_bytes": 5652157440,
-  "rootfs_sha256": "8e1891117f0e996f7cb25430f0ce643204c5e43024ebf0e8c7dc92b22526c2bf",
+  "rootfs_sha256": "e2404d0e23c8d891012267c923a35010e4210589a33086baf3bc59d4267114e4",
   "userdata_expanded_bytes": 6189031424,
-  "userdata_expanded_sha256": "9eba46dbc6e896c2451663397c454c971e104ff7d97988061e65f30e9d22ac68",
-  "userdata_sparse_bytes": 4306579864,
-  "userdata_sparse_sha256": "cefd67cebccb4a5acca2987a7c80d4d04793f50342253edea3fb98b01123b002",
+  "userdata_expanded_sha256": "7f08bb700b585d0a1cb410c52d5f1e18e55f1c5bcb40149807c96385451e07a9",
+  "userdata_sparse_bytes": 4306588056,
+  "userdata_sparse_sha256": "27125034b9f93fc21405f45759ef23268d9e4846223340a3db22ccc26acc1b29",
   "sparse_chunks": 1051,
   "wrapped_rootfs_verified": true,
   "sparse_expansion_verified": true,
@@ -20,6 +20,10 @@
     {
       "path": "/etc/systemd/system/remoteproc-late-start.service",
       "sha256": "1a831926450f9e05c133e70b9b3c07aa68266ec45746f2884198cf1ba6979314"
+    },
+    {
+      "path": "/etc/systemd/system/display-wake-daemon.service",
+      "sha256": "958784d291bee2af79243406ce75d2874f5b79ae0b8f05afd65d3f2a9a1ba22c"
     },
     {
       "path": "/etc/systemd/system/volume-key-daemon.service",
@@ -44,6 +48,10 @@
     {
       "path": "/usr/local/sbin/audio-repair.sh",
       "sha256": "11e6d72f86bbf95c756b813a4d7f275b512d297445167ac509f249a5dcb97c54"
+    },
+    {
+      "path": "/usr/local/sbin/display-wake-daemon.py",
+      "sha256": "271a6a01f9f710d21fc925c3526155534d511036ec73a861e617d497c43b3199"
     },
     {
       "path": "/usr/share/luna-service2/services.d/com.webos.service.audiooutput.service",
@@ -78,6 +86,10 @@
     {
       "path": "/etc/systemd/system/multi-user.target.wants/remoteproc-late-start.service",
       "target": "/etc/systemd/system/remoteproc-late-start.service"
+    },
+    {
+      "path": "/etc/systemd/system/multi-user.target.wants/display-wake-daemon.service",
+      "target": "/etc/systemd/system/display-wake-daemon.service"
     },
     {
       "path": "/etc/systemd/system/multi-user.target.wants/ofono.service",

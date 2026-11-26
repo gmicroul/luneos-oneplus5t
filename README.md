@@ -9,6 +9,8 @@ This repository contains a flashable LuneOS package for OnePlus 5T (`dumpling`) 
 - Audio late-start repair script and LS2 audiooutput role/service files.
 - ofono enabled with online restore drop-in after telephony starts.
 - Status-bar SIM dedup by ICCID (only one signal badge for one physical SIM).
+- Display wake watchdog: double-tap on the touchscreen or power key with a
+  failed backlight restore restarts the display manager.
 
 VoLTE/IMS registration is still not delivered; mobile data and IMS remains a known open issue. See `STATUS.md` for verified status and known limits.
 
